@@ -1,0 +1,197 @@
+/* Container that holds the top two parts */
+.container {
+    display: flex;
+    width: 100%; /* Full width */
+    height: 45vh; /* 50% of the viewport height */
+}
+
+/* Common style for all parts */
+.part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+/* Part 1 takes 40% of the width */
+.part1 {
+    background-color: #88BDBC; /* Red */
+    width: 55%; /* 40% of the width */
+    height:45vh;
+}
+
+/* Part 2 takes 60% of the width */
+.part2 {
+    background-color:white; /* Blue */
+    width: 45%; /* 60% of the width */
+    height:45vh;
+    display: flex;
+    justify-content:start;
+    align-items:start;
+}
+
+/* Part 3 takes full width and is below the top parts */
+.part3 {
+    display: flex; /* Set the layout to flex */
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Vertically align items */
+    padding: 10px; /* Optional: Add some spacing */
+    background-color: #254E58; /* Green */
+    width: 100%; /* Full width */
+    height: 55vh; /* 50% of the viewport height */
+    color: white;
+    position: relative;
+}
+.left-column {
+    display: flex;
+    flex-direction: column; /* Stack blocks vertically */
+    justify-content: space-between; /* Space out the blocks evenly */
+    align-items: flex-start; /* Align blocks to the left */
+    width: 30%; /* Take 30% of the width */
+    gap: 10px; /* Add spacing between blocks */
+}
+
+/* Right row */
+.right-row {
+    display: flex;
+    flex-direction: column; /* Arrange blocks in a row */
+    justify-content: space-around; /* Add equal spacing between blocks */
+    align-items: center; /* Align blocks vertically */
+    width: 45%; /* Take 65% of the width */
+    gap: 10px; /* Add spacing between blocks */
+}
+.section1{
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin:10px;
+    width: 125px; /* Full width */
+    height: 125px; 
+}
+.custom-table {
+    width: 100%; /* Table should take full width of the container */
+    border-collapse: collapse; /* Remove gaps between cells */
+    text-align: left; /* Align text to the left */
+    background-color: #f9f9f9; /* Light background for the table */
+}
+
+/* Table header styling */
+.custom-table th {
+    background-color: #333; /* Dark background for header */
+    color: white; /* White text for contrast */
+    padding: 8px; /* Padding inside table header cells */
+    border: 1px solid #ddd; /* Border for separation */
+}
+
+/* Table body styling */
+.custom-table td {
+    padding: 8px; /* Padding inside table data cells */
+    border: 1px solid #ddd; /* Border for separation */
+}
+
+/* Zebra striping for rows */
+.custom-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey for alternate rows */
+}
+
+/* Hover effect for rows */
+.custom-table tr:hover {
+    background-color: #ddd; /* Slightly darker background on hover */
+}
+
+.my-button {
+    background-color: #4F4A41; /* Green background */
+    border: none;              /* No border */
+    color: white;              /* White text */
+    padding: 15px 32px;        /* Padding inside the button */
+    text-align: center;        /* Center text horizontally */
+    text-decoration: none;     /* Remove underline */
+    display: inline-block;     /* Keep the button inline */
+    font-size: 16px;   
+    width:200px;        /* Font size of the text */
+    margin: 40px;          /* Space around the button */
+    cursor: pointer;          /* Pointer cursor on hover */
+    border-radius: 5px;        /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Button Hover Effect */
+.my-button:hover {
+    background-color: #423e38; /* Darker green when hovered */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#4F4A41; /* Dark background for the navbar */
+    padding: 10px 20px; /* Space inside the navbar */
+}
+
+.navbar .logo a {
+    color: white; /* White text color for the logo */
+    font-size: 24px;
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style-type: none; /* Remove bullet points */
+    display: flex;
+    gap: 20px; /* Space between navigation items */
+}
+
+.nav-links li {
+    display: inline; /* Inline list items */
+}
+
+.nav-links a {
+    color: white; /* White text color for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px;
+    padding: 8px 12px; /* Space around the text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect for Links */
+.nav-links a:hover {
+    background-color: #575757; /* Darker background color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Responsive Design: Stack the navbar items on smaller screens */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%; /* Take full width of the screen */
+        text-align: center;
+        background-color: #333; /* Ensure the background color remains on small screens */
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        display: block; /* Make the list items block-level */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+#chart_div {
+    width: 1500px;
+    height: 10px; /* Make the chart responsive */
+ /* Adjust the height relative to part2 */
+    background-color: #f9f9f9; /* Optional: Light background */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for aesthetics */
+}
